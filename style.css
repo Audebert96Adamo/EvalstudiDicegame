@@ -1,0 +1,63 @@
+* {
+  border: 1px solid yellow;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Lato;
+  position: relative;
+  background-color: orange;
+}
+.game-support {
+  width: 1000px;
+  /* height: 1000px; */
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  background-color: #fff;
+  overflow: hidden;
+}
+.player1,
+.player2 {
+  width: 50%;
+  height: 500px;
+  padding: 100px;
+}
+.name {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.score {
+  text-align: center;
+  font-size: 80px;
+  font-weight: 200;
+  color: red;
+  margin-bottom: 150px;
+}
+.round-score {
+  background-color: rgb(240, 49, 27);
+  color: #fff;
+  width: 50%;
+  margin: 0 auto;
+  padding: 5%;
+  text-align: center;
+}
+.current {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: black;
+}
+.current-score {
+  font-size: 40px;
+}
