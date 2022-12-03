@@ -1,55 +1,62 @@
 * {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
   font-family: Lato;
-  position: relative;
-  background-color: orange;
+  height: 100vh;
+  background-color: rgb(15, 15, 13);
 }
 .game-support {
-  width: 1000px;
-  /* height: 1000px; */
+  width: 75%;
+  height: 65%;
   display: flex;
-  align-items: center;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 20%);
+  transform: translate(-50%, -50%);
   background-color: #fff;
   overflow: hidden;
 }
 .player1,
 .player2 {
+  position: absolute;
   width: 50%;
-  height: 500px;
-  padding: 100px;
+  height: 100%;
 }
+.player2 {
+  right: 0;
+}
+.active { background-color: #f7f7f7; }
 .name {
-  font-size: 40px;
+  font-size: 2.5rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 100;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 25%;
+  margin-bottom: 5%;
   position: relative;
 }
+.active .name { font-weight: 300; }
 .score {
   text-align: center;
   font-size: 80px;
   font-weight: 200;
   color: red;
-  margin-bottom: 150px;
 }
 .round-score {
   background-color: rgb(240, 49, 27);
   color: #fff;
-  width: 50%;
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7%;
   margin: 0 auto;
-  padding: 5%;
+  padding: 1.5%;
   text-align: center;
 }
 .current {
@@ -60,4 +67,47 @@ body {
 }
 .current-score {
   font-size: 40px;
+}
+button {
+  position: absolute;
+  width: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+}
+button:hover { font-weight: 800;}
+button:hover i { margin-right: 10%; }
+i {
+  color: #e44a4a;
+  display: inline-block;
+  margin-right: 8%;
+  font-size: 32px;
+  line-height: 1;
+  vertical-align: text-top;
+  margin-top: -4px;
+  transition: margin 0.3s;
+}
+.new-game {
+  top: 8%;
+}
+.roll {
+  top: 76%;
+}
+.hold {
+  top: 90%;
+}
+.dice-pos {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  height: 100px;
+  box-shadow: -1px 4px 16px 0px rgb(0 0 0 / 70%);
 }
