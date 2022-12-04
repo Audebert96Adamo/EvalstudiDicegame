@@ -28,8 +28,25 @@ body {
 }
 .player2 {
   right: 0;
+  z-index: -1;
 }
 .active { background-color: #f7f7f7; }
+.name::after {
+  content: "\2022";
+  font-size: 47px;
+  position: absolute;
+  color: #EB4D4D;
+  top: -7px;
+  right: 25%;
+}
+.active .name::after {
+  content: "\2022";
+  font-size: 47px;
+  position: absolute;
+  color: #4deb55;
+  top: -7px;
+  right: 25%;
+}
 .name {
   font-size: 2.5rem;
   text-align: center;
@@ -110,4 +127,11 @@ i {
   transform: translateX(-50%);
   height: 100px;
   box-shadow: -1px 4px 16px 0px rgb(0 0 0 / 70%);
+}
+.winner { background-color: #f7f7f7; }
+.winner .name,
+.winner .score { font-weight: 700; color: #18dd32; }
+.winner .round-score {
+  background-color: #18dd32;
+  font-weight: 700;
 }
